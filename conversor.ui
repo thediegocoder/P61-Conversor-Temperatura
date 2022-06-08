@@ -6,13 +6,53 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>301</width>
+    <height>228</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Conversor</string>
   </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Centígrados</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLCDNumber" name="outCent">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(252, 233, 79);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDial" name="inCent"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>fahrenheit</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLCDNumber" name="outFahr">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(252, 175, 62);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDial" name="inFahr"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
