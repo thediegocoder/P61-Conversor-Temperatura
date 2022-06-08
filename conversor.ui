@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>301</width>
-    <height>228</height>
+    <height>247</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QDial" name="inCent"/>
+       <widget class="QDial" name="inCent">
+        <property name="minimum">
+         <number>-18</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -36,7 +40,7 @@
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
-      <string>fahrenheit</string>
+      <string>Fahrenheit</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -47,7 +51,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QDial" name="inFahr"/>
+       <widget class="QDial" name="inFahr">
+        <property name="maximum">
+         <number>210</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -55,5 +63,38 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>inCent</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>outCent</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>78</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inFahr</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>outFahr</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>222</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
