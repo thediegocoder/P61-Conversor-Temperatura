@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>recursos/baja-temperatura.png</file>
+        <file>img/icon/termometro.ico</file>
     </qresource>
 </RCC>
